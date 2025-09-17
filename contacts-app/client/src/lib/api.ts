@@ -18,6 +18,7 @@ export async function apiCall(endpoint: string, data: any) {
 
 export const api = {
   login: (data: { login: string; password: string }) => apiCall('Login', data),
+  signup: (data: { firstName: string; lastName: string; login: string; password: string }) => apiCall('Register', data),
   addContact: (data: { contact: string; userId: number }) => apiCall('AddContact', data),
   searchContacts: (data: { search: string; userId: number }) => apiCall('SearchContacts', data),
 };
